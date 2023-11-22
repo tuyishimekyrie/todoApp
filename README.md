@@ -1,5 +1,11 @@
 # Software Development Upskill Final Project (BAG)
 
+### Live Demo
+
+Check out the live demo [here](https://todo-app-sigma-henna-15.vercel.app/).
+
+![Todo Application Screenshot](./src/assets/Screenshot%202023-11-22%20114231.png)
+
 ## Todo Application
 
 This project is a simple yet powerful todo application designed to assist users in efficiently tracking and managing their tasks. The application provides a clean and user-friendly interface with essential features such as task addition, removal, prioritization, and clear task filtering.
