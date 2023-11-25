@@ -4,7 +4,7 @@
 
 Check out the live demo [here](https://todo-app-sigma-henna-15.vercel.app/).
 
-![Todo Application Screenshot](./src/assets/Screenshot%202023-11-22%20114231.png)
+![Todo Application Screenshot](./src/assets/bag.png)
 
 ## Todo Application
 
