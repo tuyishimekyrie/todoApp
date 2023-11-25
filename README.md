@@ -18,6 +18,8 @@ This project is a simple yet powerful todo application designed to assist users 
 
 - **Prioritize Tasks**: Mark tasks as 'Important' to highlight their significance. Visually distinguish important tasks with a distinct style.
 
+- **Update Tasks**: Update" button on a task, and a popup will appear to allow them to modify the task content. The changes will be reflected in the task list after updating..
+
 - **Clear Filtering**: Filter tasks in a clear and organized manner to focus on specific categories or priorities.
 
 ### Technology Stack
