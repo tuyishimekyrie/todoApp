@@ -7,6 +7,13 @@ import Todos from "./components/Todos";
 const Layout = () => {
   const [todos, setTodos] = useState([]);
   const [mode, setMode] = useState("all");
+  const updateTodo = (id, updatedTodo) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, todo: updatedTodo } : todo
+    );
+    window.localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    setTodos(updatedTodos);
+  };
 
   useEffect(() => {
     if (mode === "all") {
@@ -90,15 +97,15 @@ const Layout = () => {
         <div className="mt-4 space-y-4">
           <CreateTodo onSubmit={addTodo} />
         
-                <Todos 
-                  mode={mode}
-                  todos={todos}
-                  onDelete={removeTodo}
-                  onClear={clearCompleted}
-                  onComplete={toggleCompleteHandler}
-                  changeModeHandler={changeModeHandler}
-                />;
-             
+               <Todos
+          mode={mode}
+          todos={todos}
+          onDelete={removeTodo}
+          onClear={clearCompleted}
+          onComplete={toggleCompleteHandler}
+          changeModeHandler={changeModeHandler}
+          onUpdate={updateTodo}
+        />
           <div className="bg-white dark:bg-gray-800 text-sm shadow-2xl flex items-center justify-center p-4 gap-4 rounded-lg lg:hidden">
             <button
               onClick={changeModeHandler}
