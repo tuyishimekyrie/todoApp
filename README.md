@@ -41,7 +41,7 @@ This project is a simple yet powerful todo application designed to assist users 
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    gh repo clone tuyishimekyrie/todoApp
     ```
 
 2. **Navigate to the Project Directory**:
@@ -62,12 +62,6 @@ This project is a simple yet powerful todo application designed to assist users 
         ```
 
 4. **Access the Application**:
-    Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+    Open your browser and navigate to [http://localhost:5173](http://localhost:5173).
 
-### License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to customize this description based on your project's specific details and requirements.
