@@ -4,7 +4,8 @@
 
 Check out the live demo [here](https://todo-app-sigma-henna-15.vercel.app/).
 
-![Todo Application Screenshot](./src/assets/bag.jpeg)
+![Todo Application Screenshot in Dark Mode](./src/assets/bag.jpeg)
+![Todo Application Screenshot in Light Mode](./src/assets/bag2.jpeg)
 
 ## Todo Application
 
