@@ -9,7 +9,7 @@ const Header = () => {
         const darkmode = window.localStorage.getItem("darkMode");
         setDarkMode(JSON.parse(darkmode));
     }, []);
-    console.log(darkMode)
+    // console.log(darkMode)
 
     useEffect(() => {
         if (darkMode === true) {

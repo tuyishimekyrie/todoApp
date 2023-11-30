@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// Todo.js
 import  { useState } from "react";
 import UpdateTodoPopup from "./UpdateTodoPopup";
 
@@ -23,7 +22,6 @@ const Todo = ({ todo, onDelete, onComplete, onUpdate }) => {
           : "text-white dark:bg-gray-800 border dark:border-gray-700"
       }`}
     >
-      {/* Move the UpdateTodoPopup component outside the span */}
       {showUpdatePopup && (
         <UpdateTodoPopup
           todo={todo}

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// UpdateTodoPopup.js
 import  { useState } from "react";
 
 const UpdateTodoPopup = ({ todo, onUpdate, onCancel }) => {

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const CreateTodo = ({ onSubmit }) => {
   const [isCompleted, setIsCompleted] = useState(false);
-  const [isImportant, setIsImportant] = useState(false); // New state for importance
+  const [isImportant, setIsImportant] = useState(false);
   const [text, setText] = useState("");
 
   const submitHandler = (e) => {
@@ -12,14 +12,18 @@ const CreateTodo = ({ onSubmit }) => {
     const todo = {
       id: "id" + Math.random().toString(16).slice(2),
       isCompleted: isCompleted,
-      isImportant: isImportant, // Include importance in the todo object
+      isImportant: isImportant, 
       todo: text,
       order: new Date(),
     };
-    onSubmit(todo);
-    setText("");
-    setIsCompleted(false); // Reset completion status
-    setIsImportant(false); // Reset importance status
+    if (todo.todo == '') {
+      alert('Type a todo')
+    } else {
+      onSubmit(todo);
+      setText("");
+      setIsCompleted(false); 
+      setIsImportant(false); 
+    }
   };
 
   const changeTextHandler = (e) => {
@@ -60,13 +64,13 @@ const CreateTodo = ({ onSubmit }) => {
       />
       <button
         className={`${
-          isImportant
-            ? "text-yellow-400 " // Style for important tasks
+          !isImportant
+            ? "bg-gradient-to-br from-sky-500 to-violet-500 text-white"
             : "bg-gradient-to-br from-sky-500 to-violet-500 text-white"
         } px-4 py-1 rounded-full hover:bg-gradient-to-bl hover:from-sky-800 hover:to-violet-400`}
         onClick={toggleImportance}
       >
-        {isImportant ? "Important" : "Not Important"}
+        {!isImportant ? "Important" : "Not Important"}
       </button>
       <button
         className="bg-gradient-to-br from-sky-500 to-violet-500 text-white px-4 py-1 rounded-full hover:bg-gradient-to-bl hover:from-sky-800 hover:to-violet-400"
