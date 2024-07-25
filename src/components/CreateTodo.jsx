@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const CreateTodo = ({ onSubmit }) => {
   const [isCompleted, setIsCompleted] = useState(false);
@@ -17,7 +18,7 @@ const CreateTodo = ({ onSubmit }) => {
       order: new Date(),
     };
     if (todo.todo == '') {
-      alert('Type a todo')
+      toast.error("Type a todo")
     } else {
       onSubmit(todo);
       setText("");
@@ -39,6 +40,9 @@ const CreateTodo = ({ onSubmit }) => {
       className="bg-white w-full flex p-4 gap-4 rounded-lg dark:bg-gray-800"
       onSubmit={submitHandler}
     >
+      <div>
+        <Toaster />
+      </div>
       <span
         onClick={() => setIsCompleted((prev) => !prev)}
         className={`w-6 h-6 rounded-full flex items-center justify-center overflow-hidden ${

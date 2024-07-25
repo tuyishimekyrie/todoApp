@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CreateTodo from "./components/CreateTodo";
 import Header from "./components/Header";
 import Todos from "./components/Todos";
+import Toaster from "react-hot-toast"
 
 const Layout = () => {
   const [todos, setTodos] = useState([]);
@@ -92,20 +93,21 @@ const Layout = () => {
   return (
     <main className="select-none min-h-screen bg-gray-50 bg-bg-light-mobile lg:bg-bg-light dark:bg-bg-dark-mobile sm:dark:bg-bg-dark dark:bg-gray-900 bg-no-repeat bg-contain">
       <div className="max-w-2xl mx-auto w-11/12">
+      
         <Header />
 
         <div className="mt-4 space-y-4">
           <CreateTodo onSubmit={addTodo} />
-        
-               <Todos
-          mode={mode}
-          todos={todos}
-          onDelete={removeTodo}
-          onClear={clearCompleted}
-          onComplete={toggleCompleteHandler}
-          changeModeHandler={changeModeHandler}
-          onUpdate={updateTodo}
-        />
+
+          <Todos
+            mode={mode}
+            todos={todos}
+            onDelete={removeTodo}
+            onClear={clearCompleted}
+            onComplete={toggleCompleteHandler}
+            changeModeHandler={changeModeHandler}
+            onUpdate={updateTodo}
+          />
           <div className="bg-white dark:bg-gray-800 text-sm shadow-2xl flex items-center justify-center p-4 gap-4 rounded-lg lg:hidden">
             <button
               onClick={changeModeHandler}
@@ -137,8 +139,6 @@ const Layout = () => {
           </div>
         </div>
       </div>
-
-      
     </main>
   );
 };
